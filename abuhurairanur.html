@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abu Huraira Nur | CSE Student</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header / Hero Section */
+        .hero {
+            background: white;
+            border-radius: 30px;
+            padding: 50px 40px;
+            margin: 40px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .profile-picture {
+    width: 120px;       /* Circle er size */
+    height: 120px;
+    border-radius: 50%; /* Eta diyei circle hobe */
+    overflow: hidden;   /* Chobi jeno circle er baire na jay */
+    border: 4px solid white; /* Border dile dekhte bhalo lagbe */
+    margin: 0 auto;     /* Center korar jonno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Chobi jeno stretch na hoy */
+}
+
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin: 10px 5px;
+        }
+
+        /* Sections */
+        .section {
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #667eea;
+            border-left: 5px solid #764ba2;
+            padding-left: 20px;
+        }
+
+        /* About */
+        .about-text {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Education & Skills */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Projects */
+        .project-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .project-item:hover {
+            background: #f0f2f5;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        /* Contact */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .contact-card {
+            background: #f8f9fa;
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .contact-card:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .contact-card i {
+            font-size: 1.3rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .hero {
+                padding: 30px 20px;
+            }
+            .section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="profile-picture">
+    <img src="mypic.png" alt="Abu Huraira Nur">
+</div>
+            <h1>Abu Huraira Nur</h1>
+            <div class="tagline">
+                <i class="fas fa-graduation-cap"></i> CSE Student @ Daffodil International University
+            </div>
+            <div>
+                <span class="badge"><i class="fas fa-code"></i> Web Developer</span>
+                <span class="badge"><i class="fas fa-database"></i> Problem Solver</span>
+                <span class="badge"><i class="fas fa-mobile-alt"></i> Tech Enthusiast</span>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="section">
+            <h2><i class="fas fa-user"></i> About Me</h2>
+            <div class="about-text">
+                <p>Hello! I'm <strong>Abu Huraira Nur</strong>, a passionate Computer Science & Engineering student at <strong>Daffodil International University</strong>. I love building creative web applications, solving complex problems, and exploring new technologies. I'm always eager to learn and grow as a developer.</p>
+                <br>
+                <p>My goal is to use technology to make a positive impact on people's lives. Currently, I'm focusing on full-stack web development and competitive programming.</p>
+            </div>
+        </div>
+
+        <!-- Education & Skills -->
+        <div class="section">
+            <h2><i class="fas fa-laptop-code"></i> Education & Skills</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3><i class="fas fa-university"></i> Education</h3>
+                    <p><strong>B.Sc. in Computer Science & Engineering</strong><br>
+                    Daffodil International University<br>
+                    2023 - Present | Current CGPA: 3.80+</p>
+                    <hr style="margin: 15px 0;">
+                    <p><strong>Higher Secondary Certificate (HSC)</strong><br>
+                    Science Group - GPA 5.00</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-cogs"></i> Technical Skills</h3>
+                    <div>
+                        <span class="skill-tag">HTML5/CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                    </div>
+                    <br>
+                    <h3><i class="fas fa-heart"></i> Soft Skills</h3>
+                    <div>
+                        <span class="skill-tag">Teamwork</span>
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <h2><i class="fas fa-project-diagram"></i> My Projects</h2>
+            <div class="project-item">
+                <div class="project-title">🌐 Personal Portfolio Website</div>
+                <p>A responsive personal portfolio website to showcase my skills and projects. Built with HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="project-item">
+                <div class="project-title">📱 University Management System</div>
+                <p>A web-based system for managing student records, courses, and results using React and Node.js.</p>
+            </div>
+            <div class="project-item">
+                <div class="project-title">🤖 AI Chatbot Assistant</div>
+                <p>An interactive chatbot for answering FAQs using Python and NLP techniques.</p>
+            </div>
+            <div class="project-item">
+                <div class="project-title">📊 E-commerce Website</div>
+                <p>Full-stack e-commerce platform with user authentication, product management, and payment integration.</p>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="section">
+            <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+            <div class="contact-info">
+                <a href="mailto:abu.huraira@example.com" class="contact-card">
+                    <i class="fas fa-envelope"></i> iamabuhurairanur@gmail.com
+                </a>
+                <a href="#" class="contact-card">
+                    <i class="fab fa-github"></i> github/abuhuraira
+                </a>
+                <a href="#" class="contact-card">
+                    <i class="fab fa-linkedin"></i> https://www.linkedin.com/in/abuhurairanur/
+                </a>
+                <a href="#" class="contact-card">
+                    <i class="fab fa-facebook"></i> https://www.facebook.com/share/1CxEewPChJ/
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 Abu Huraira Nur | CSE, Daffodil International University</p>
+            <p><i class="fas fa-heart" style="color: #ff6b6b;"></i> Passionate to Code & Create</p>
+        </div>
+    </div>
+</body>
+</html>
